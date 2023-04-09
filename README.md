@@ -17,7 +17,7 @@ http://localhost:8082/java-kafka-docker/
 After checking, access resource like below.<br>
 http://localhost:8082/java-kafka-docker/resouces/kafka?param1=TEST
 
-you can see the parameter you request on your console like this.<br>
+you can see the parameter you request on your console like them.<br>
 - producer's side write<br>
 ```
 TEST : This is the record sending by producer client according to parameter you add to url.
