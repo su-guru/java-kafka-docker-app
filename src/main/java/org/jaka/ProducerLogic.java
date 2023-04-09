@@ -13,16 +13,9 @@ import java.util.Properties;
 @Dependent
 public class ProducerLogic {
     public void execute() {
-        Logger logger = LoggerFactory.getLogger(ProducerLogic.class);
-        logger.info("This is the info");
-
-        String bootstrapServer = "kafka1:19092";
-        String serverDocker = "host.docker.internal:29092";
-        String internalServer = "kafka1:9092";
+        String bootstrapServer = "kafka1:9092";
         Properties properties = new Properties();
-        properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverDocker);
-        // properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverDocker);
-        // properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, internalServer);
+        properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<>(properties);
