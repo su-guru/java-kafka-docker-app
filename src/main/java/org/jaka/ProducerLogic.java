@@ -1,14 +1,11 @@
 package org.jaka;
 
+import java.util.Properties;
+import javax.enterprise.context.Dependent;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.enterprise.context.Dependent;
-import java.util.Properties;
 
 @Dependent
 public class ProducerLogic {
