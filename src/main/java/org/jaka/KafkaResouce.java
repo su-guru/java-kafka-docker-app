@@ -12,11 +12,11 @@ import javax.ws.rs.core.Response;
 public class KafkaResouce {
 
     @Inject
-    ProducerClient logic;
+    ProducerClient client;
     
     @GET
     public Response sendMessage(@QueryParam("param1") String message) {
-        logic.execute(message);
+        client.execute(message);
         return Response.ok("Success sending message to kafka platform").build();
     }
 }
