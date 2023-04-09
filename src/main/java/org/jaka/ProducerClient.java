@@ -8,15 +8,15 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 @Dependent
-public class ProducerLogic {
-    public void execute() {
+public class ProducerClient {
+    public void execute(String message) {
         String bootstrapServer = "kafka1:9092";
         Properties properties = new Properties();
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<>(properties);
-        ProducerRecord<String, String> record = new ProducerRecord<>("demo_java", "hello_world");
+        ProducerRecord<String, String> record = new ProducerRecord<>("demo_java", message);
         kafkaProducer.send(record);
         kafkaProducer.flush();
         kafkaProducer.close();

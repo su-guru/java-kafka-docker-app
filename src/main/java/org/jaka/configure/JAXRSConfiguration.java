@@ -1,4 +1,4 @@
-package org.jaka;
+package org.jaka.configure;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -1,3 +1,25 @@
+# Java web app links Kafka platform in Docker containers
+
+## Prerequisite
+- Docker Engine
+- JDK 11
+
+## How to start
+```sh
+docker-compose up -d
+```
+
+When Successfully start, call below and then you can see index page.
+```
+http://localhost:8082/java-kafka-docker/
+```
+
+After checking, access resource like below.
+http://localhost:8082/java-kafka-docker/resouces/kafka?param1=TEST
+
+you can see the parameter you request on your console like this.
+"TEST : this is the record from producer client"
+
 ## Links
 [Kafka Docker Network](https://www.confluent.io/blog/kafka-listeners-explained/)
 - kafka listener
