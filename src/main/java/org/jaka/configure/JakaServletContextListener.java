@@ -37,9 +37,9 @@ public class JakaServletContextListener implements ServletContextListener {
 
   @Override
   public void contextDestroyed(ServletContextEvent sce) {
-      // Shutdown the executor service when the context is destroyed
-        if (managedExecutorService != null) {
-          managedExecutorService.shutdown();
-      }    
+    // Shutdown the executor service when the context is destroyed
+    if (managedExecutorService != null) {
+      managedExecutorService.shutdown();
+    }
   }
 }
