@@ -14,10 +14,10 @@ When Successfully start, call below and then you can see index page.
 http://localhost:8082/java-kafka-docker/
 ```
 
-After checking, access resource like below.
+After checking, access resource like below.<br>
 http://localhost:8082/java-kafka-docker/resouces/kafka?param1=TEST
 
-you can see the parameter you request on your console like this.
+you can see the parameter you request on your console like this.<br>
 "TEST : this is the record from producer client"
 
 ## Links
