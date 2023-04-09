@@ -18,6 +18,7 @@ public class ProducerClient {
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<>(properties);
         ProducerRecord<String, String> record = new ProducerRecord<>("demo_java", message);
         kafkaProducer.send(record);
+        System.out.print(record.value() + ": This is the record sending by producer client according to parameter you add to url.");
         kafkaProducer.flush();
         kafkaProducer.close();
     }
