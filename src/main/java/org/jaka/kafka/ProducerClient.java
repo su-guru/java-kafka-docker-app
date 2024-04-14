@@ -1,4 +1,4 @@
-package org.jaka;
+package org.jaka.kafka;
 
 import java.util.Properties;
 import javax.enterprise.context.Dependent;

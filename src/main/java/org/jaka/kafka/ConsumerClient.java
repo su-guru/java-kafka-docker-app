@@ -1,4 +1,4 @@
-package org.jaka;
+package org.jaka.kafka;
 
 import java.time.Duration;
 import java.util.Arrays;

@@ -8,7 +8,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import org.jaka.ConsumerClient;
+import org.jaka.kafka.ConsumerClient;
 
 @WebListener
 public class JakaServletContextListener implements ServletContextListener {
